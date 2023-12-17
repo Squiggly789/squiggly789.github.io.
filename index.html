@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap JS and Popper.js (for Bootstrap functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Font Awesome Icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Fonts - Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+  <title>NotJust4Nerds</title>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">NotJust4Nerds</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link home-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resources.html">Computing Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="challanges.html">Challenges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Header Section -->
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4">Welcome to NotJust4Nerds</h1>
+    <p class="lead">Explore free computing resources and check out my portfolio.</p>
+  </div>
+</header>
+
+<!-- Computing Resources Section -->
+<section id="computing-resources">
+  <div class="container">
+    <h2 class="text-center mb-4">Computing Resources</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Online Courses</h3>
+        <p>Discover a variety of online courses covering programming, algorithms, and more.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Powerpoints</h3>
+        <p>Access comprehensive documentation for popular programming languages and frameworks.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Resources</h3>
+        <p>Explore additional resources to enhance your knowledge in the field of computing.</p>
+      </div>
+    </div>
+    <!-- Centered button for the Computing Resources section -->
+    <div class="text-center">
+      <a href="resources.html" class="btn"> Click Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- Computing Challenges Section -->
+<section id="challenges" class="bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Computing Challenges</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Algorithm Challenges</h3>
+        <p>Solve algorithmic problems to sharpen your problem-solving abilities.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Coding Puzzles</h3>
+        <p>Explore a collection of coding puzzles designed to test and improve your coding skills.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Project Tasks</h3>
+        <p>Take on project-based tasks to apply your knowledge and build practical experience.</p>
+      </div>
+    </div>
+    <!-- Centered button for the Computing Challenges section -->
+    <div class="text-center">
+      <a href="challanges.html" class="btn"> Click Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+  <div class="container">
+    <h2 class="text-center mb-4">Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Web Development</h3>
+        <p>Check out my web development projects, including responsive websites and web applications.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Data Science</h3>
+        <p>Explore my data science projects, where I analyze and visualize data to gain insights.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Open Source Contributions</h3>
+        <p>View my contributions to open-source projects and collaborations with the developer community.</p>
+      </div>
+    </div>
+    <!-- Centered button for the Portfolio section -->
+    <div class="text-center">
+      <a href="portfolio.html" class="btn"> Click Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p>&copy; 2023 NotJust4Nerds. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+  $(document).ready(function() {
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+    $('a[href="' + filename + '"]').addClass('active');
+  });
+
+</html>
